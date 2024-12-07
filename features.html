@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Wonders - Features</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #00bfff, #99ff99, #00bfff);
+            color: #003366;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background: linear-gradient(to right, #004d99, #ffffff);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #004d99;
+            margin: 0 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+            transform: scale(1.1);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, rgba(0, 77, 153, 0.8), transparent);
+            color: #ffffff;
+            animation: fadeIn 2s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideInDown 1.5s ease-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        /* Main Content */
+        main {
+            text-align: center;
+            padding: 40px 20px;
+            animation: slideInUp 1.5s;
+        }
+
+        main h2 {
+            font-size: 2.5rem;
+            color: #002d59;
+            margin-bottom: 30px;
+            animation: slideInLeft 1.5s;
+        }
+
+        /* Bubble Styled List (Side by Side) */
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        .feature-container .feature {
+            background-color: #ffffff;
+            padding: 25px;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: #003366;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .feature-container .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background-color: #e6f7ff;
+        }
+
+        /* Call-to-Action Button */
+        .cta {
+            margin-top: 30px;
+        }
+
+        .cta a {
+            text-decoration: none;
+            background-color: #004d99;
+            color: #ffffff;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #0066cc;
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #004d99, #ffffff);
+            color: #004d99;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #004d99;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #0066cc;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feature-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-container .feature {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="community.html">Community</a>
+    </nav>
+    <header>
+        <h1>Game Features</h1>
+        <p>Explore the incredible features that make Sky Wonders an adventure like no other.</p>
+    </header>
+    <main>
+        <h2>Key Features of Sky Wonders</h2>
+        <div class="feature-container">
+            <div class="feature">
+                <strong>Dynamic Sky Exploration</strong>
+                <p>Immerse yourself in a world of floating islands, ever-changing skies, and breathtaking views. Each adventure offers new surprises to uncover.</p>
+            </div>
+            <div class="feature">
+                <strong>Challenging Mysteries to Solve</strong>
+                <p>Delve into puzzles hidden across the skies. Solve them to uncover hidden treasures.</p>
+            </div>
+            <div class="feature">
+                <strong>Stunning Visuals</strong>
+                <p>Experience the beauty of Sky Wonders, with its meticulously designed landscapes, ethereal lighting effects, and dynamic weather systems that evolve with time.</p>
+            </div>
+            <div class="feature">
+                <strong>Multiplayer Adventures</strong>
+                <p>Join forces with friends or strangers and embark on exciting group quests, face formidable challenges, and share the thrill of exploration together.</p>
+            </div>
+            <div class="feature">
+                <strong>Seasonal Events and Rewards</strong>
+                <p>Engage in special events tied to real-world seasons, unlocking exclusive items, rare skins, and limited-time quests that offer a unique experience.</p>
+            </div>
+        </div>
+        <div class="cta">
+            <a href="https://discord.gg/G3czh8M5mB" target="_blank">Join the Sky Wonders Community</a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Sky Wonders | Connect with us on Discord: <a href="https://discord.gg/G3czh8M5mB" target="_blank">Sky Wonders Community</a></p>
+    </footer>
+</body>
+</html>
