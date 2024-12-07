@@ -24,7 +24,6 @@
             z-index: 1000;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
         }
 
         nav a {
@@ -47,33 +46,28 @@
             padding: 60px 20px;
             background: linear-gradient(to bottom, rgba(0, 77, 153, 0.8), transparent);
             color: #ffffff;
-            animation: fadeIn 2s;
         }
 
         header h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            animation: slideInDown 1.5s ease-out;
         }
 
         header p {
             font-size: 1.5rem;
             margin-top: 10px;
-            animation: fadeInUp 2s ease-out;
         }
 
         /* Main Content */
         main {
             text-align: center;
             padding: 40px 20px;
-            animation: slideInUp 1.5s;
         }
 
         main h2 {
             font-size: 2.5rem;
             color: #002d59;
             margin-bottom: 30px;
-            animation: slideInLeft 1.5s;
         }
 
         /* Bubble Styled List (Side by Side) */
@@ -82,10 +76,9 @@
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            animation: fadeInUp 1.8s ease-out;
         }
 
-        .feature-container .feature {
+        .feature {
             background-color: #ffffff;
             padding: 25px;
             font-size: 1.3rem;
@@ -96,31 +89,34 @@
             transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
         }
 
-        .feature-container .feature:hover {
+        .feature:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             background-color: #e6f7ff;
         }
 
-        /* Call-to-Action Button */
-        .cta {
-            margin-top: 30px;
+        .centered-feature {
+            margin: 40px auto;
+            width: 80%;
+            max-width: 400px;
         }
 
-        .cta a {
-            text-decoration: none;
-            background-color: #004d99;
-            color: #ffffff;
-            padding: 15px 40px;
-            font-size: 1.3rem;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        /* Images */
+        .image-container {
+            margin: 20px 0;
         }
 
-        .cta a:hover {
-            background-color: #0066cc;
-            transform: scale(1.1);
+        .image-container img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Footer */
@@ -130,7 +126,6 @@
             text-align: center;
             padding: 15px 0;
             margin-top: 30px;
-            animation: fadeIn 2s ease-in-out;
         }
 
         footer a {
@@ -143,60 +138,6 @@
             color: #0066cc;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .feature-container {
@@ -204,8 +145,12 @@
                 align-items: center;
             }
 
-            .feature-container .feature {
+            .feature {
                 width: 80%;
+            }
+
+            .image-container img {
+                width: 90%;
             }
         }
     </style>
@@ -223,30 +168,38 @@
     </header>
     <main>
         <h2>Key Features of Sky Wonders</h2>
+        <div class="image-container">
+            <img src="image.webp" alt="Dynamic Sky Exploration">
+        </div>
         <div class="feature-container">
             <div class="feature">
                 <strong>Dynamic Sky Exploration</strong>
-                <p>Immerse yourself in a world of floating islands, ever-changing skies, and breathtaking views. Each adventure offers new surprises to uncover.</p>
+                <p>Immerse yourself in a world of floating islands, ever-changing skies, and breathtaking views.</p>
             </div>
             <div class="feature">
                 <strong>Challenging Mysteries to Solve</strong>
-                <p>Delve into puzzles hidden across the skies. Solve them to uncover hidden treasures.</p>
+                <p>Delve into ancient puzzles hidden across the skies to uncover artifacts and treasures.</p>
             </div>
+        </div>
+        <div class="image-container">
+            <img src="image4.webp" alt="Stunning Visuals">
+        </div>
+        <div class="feature-container">
             <div class="feature">
                 <strong>Stunning Visuals</strong>
-                <p>Experience the beauty of Sky Wonders, with its meticulously designed landscapes, ethereal lighting effects, and dynamic weather systems that evolve with time.</p>
+                <p>Experience the beauty of meticulously designed landscapes and dynamic weather systems.</p>
             </div>
             <div class="feature">
                 <strong>Multiplayer Adventures</strong>
-                <p>Join forces with friends or strangers and embark on exciting group quests, face formidable challenges, and share the thrill of exploration together.</p>
-            </div>
-            <div class="feature">
-                <strong>Seasonal Events and Rewards</strong>
-                <p>Engage in special events tied to real-world seasons, unlocking exclusive items, rare skins, and limited-time quests that offer a unique experience.</p>
+                <p>Join forces with friends or strangers for exciting group quests and challenges.</p>
             </div>
         </div>
-        <div class="cta">
-            <a href="https://discord.gg/G3czh8M5mB" target="_blank">Join the Sky Wonders Community</a>
+        <div class="centered-feature feature">
+            <strong>Seasonal Events and Rewards</strong>
+            <p>Engage in seasonal events to unlock exclusive items, rare skins, and unique quests.</p>
+        </div>
+        <div class="image-container">
+            <img src="image5.webp" alt="Seasonal Events">
         </div>
     </main>
     <footer>
